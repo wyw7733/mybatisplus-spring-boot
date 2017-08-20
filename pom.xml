@@ -88,6 +88,18 @@
 		    <groupId>org.springframework.data</groupId>
 		    <artifactId>spring-data-commons</artifactId>
 	    </dependency>
+	    
+		<!-- 邮件发送依赖 -->
+		<dependency> 
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-mail</artifactId>
+		</dependency> 
+		
+		<!-- 发送模板邮件需要依赖的jar -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
         
 	</dependencies>
 	

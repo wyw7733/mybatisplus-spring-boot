@@ -1,6 +1,4 @@
 package com.baomidou.springboot.controller;
-import java.util.Locale;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +8,7 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 
 import com.baomidou.springboot.service.MailService;
 /**
+ * 以下所有功能是基于springboot实现的，如果没用次框架，实现办法是仅供参考
  * 1.需要注意的是邮件内容，邮件标题中请勿出现中文“测试”，“test”，等字眼，不然邮箱服务器会当成垃圾拦截处理
  * 2.发送前需设置发送方的smtp协议跟pop3协议处于开启状态，并且记住授权码设置到配置文件的password项，邮件接收方可以不开启
  * 3.application.properties文件是springboot的默认配置文件，邮件的基本配置设置好后自动读取
@@ -23,7 +22,9 @@ public class MailController {
 	
 	@Autowired
 	private MailService mailService;
-	
+	/**
+	 * springboot提供的模板引擎
+	 */
 	@Autowired
 	private SpringTemplateEngine templateEngine;
 	
